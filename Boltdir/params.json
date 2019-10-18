@@ -1,0 +1,19 @@
+{
+    "install": true,
+    "configure": true,
+    "upgrade": false,
+  
+    "master_host": "pe-xl-core-0.robertmaury.com",
+    "puppetdb_database_host": "pe-xl-core-1.robertmaury.com",
+    "master_replica_host": "pe-xl-core-2.robertmaury.com",
+    "puppetdb_database_replica_host": "pe-xl-core-3.robertmaury.com",
+    "compiler_hosts": [
+      "pe-xl-compiler-0.robertmaury.com",
+      "pe-xl-compiler-1.robertmaury.com"
+    ],
+  
+    "console_password": "puppetlabs",
+    "dns_alt_names": [ "puppet", "puppet.robertmaury.com" ],
+    "compiler_pool_address": "puppet.robertmaury.com",
+    "version": "2018.1.4"
+  }

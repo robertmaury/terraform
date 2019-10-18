@@ -1,0 +1,17 @@
+---
+groups:
+  - name: pe_xl_nodes
+    config:
+      transport: ssh
+      ssh:
+        host-key-check: false
+        user: centos
+        run-as: root
+        tty: true
+    nodes:
+      - pe-xl-core-0.robertmaury.com
+      - pe-xl-core-1.robertmaury.com
+      - pe-xl-core-2.robertmaury.com
+      - pe-xl-core-3.robertmaury.com
+      - pe-xl-compiler-0.robertmaury.com
+      - pe-xl-compiler-1.robertmaury.com
