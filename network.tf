@@ -1,18 +1,23 @@
-resource "aws_vpc" "pe_xl-vpc" {
-  cidr_block = "10.0.0.0/16"
-}
+# resource "aws_vpc" "pe_xl-vpc" {
+#   cidr_block = "10.0.0.0/16"
+# }
+
+# resource "aws_subnet" "pe_xl-subnet" {
+#   vpc_id     = "${aws_vpc.pe_xl-vpc.id}"
+#   cidr_block = "10.0.1.0/24"
+# }
 
 resource "aws_security_group" "pe_xl-sg" {
   description = "Puppet Network Flow"
   name        = "pe_xl-sg"
-  vpc_id      = "pe_xl-vpc"
+  # vpc_id      = "${aws_vpc.pe_xl-vpc.id}"
 
-  # egress {
-  #   from_port   = 0
-  #   to_port     = 0
-  #   protocol    = "-1"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   # ingress {
   #   from_port   = 1

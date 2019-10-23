@@ -7,11 +7,12 @@ groups:
         host-key-check: false
         user: centos
         run-as: root
+        private_key: puppet.pem
         tty: true
     nodes:
-      - pe-xl-core-0.robertmaury.com
-      - pe-xl-core-1.robertmaury.com
-      - pe-xl-core-2.robertmaury.com
-      - pe-xl-core-3.robertmaury.com
-      - pe-xl-compiler-0.robertmaury.com
-      - pe-xl-compiler-1.robertmaury.com
+      - pe-xl-core-0.rmaurydemo.com
+      - pe-xl-core-1.rmaurydemo.com
+      - pe-xl-core-2.rmaurydemo.com
+      - pe-xl-core-3.rmaurydemo.com
+      - pe-xl-compiler-0.rmaurydemo.com
+      - pe-xl-compiler-1.rmaurydemo.com
