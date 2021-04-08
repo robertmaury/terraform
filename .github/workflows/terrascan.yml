@@ -14,8 +14,3 @@ jobs:
         iac_type: 'terraform'
         iac_version: 'v14'
         policy_type: 'aws'
-        only_warn: false
-        #iac_dir:
-        #policy_path:
-        #skip_rules:
-        #config_path:
