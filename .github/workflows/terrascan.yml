@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - name: Terraform-Lint
+      uses: actionshub/terraform-lint@1.0.0
     - name: Run Terrascan
       id: terrascan
       uses: accurics/terrascan-action@v1
