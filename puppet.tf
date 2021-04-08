@@ -2,8 +2,8 @@ variable "region" {}
 variable "domain" {}
 
 provider "aws" {
-  profile    = "default"
-  region     = var.region
+  profile = "default"
+  region  = var.region
 }
 
 resource "aws_instance" "pe-xl-core-0" {
@@ -13,8 +13,8 @@ resource "aws_instance" "pe-xl-core-0" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static pe-xl-core-0${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-core-0
@@ -30,8 +30,8 @@ resource "aws_instance" "pe-xl-core-1" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static pe-xl-core-1${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-core-1
@@ -47,8 +47,8 @@ resource "aws_instance" "pe-xl-core-2" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static pe-xl-core-2${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-core-2
@@ -64,8 +64,8 @@ resource "aws_instance" "pe-xl-core-3" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static pe-xl-core-3${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-core-3
@@ -98,8 +98,8 @@ resource "aws_instance" "pe-xl-compiler-0" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static pe-xl-compiler-0${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-compiler-0
@@ -115,8 +115,8 @@ resource "aws_instance" "pe-xl-compiler-1" {
   # subnet_id = "${aws_subnet.pe_xl-subnet.id}"
   # user_data = "hostnamectl set-hostname --static  pe-xl-compiler-1${var.domain}"
   security_groups = ["${aws_security_group.pe_xl-sg.name}"]
-  key_name = "puppet"
-  user_data = <<EOT
+  key_name        = "puppet"
+  user_data       = <<EOT
   #cloud-config
   preserve_hostname: false
   hostname: pe-xl-compiler-1
